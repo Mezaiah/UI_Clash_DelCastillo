@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using SimpleJSON;
 using UnityEngine.Rendering;
 using System.Runtime.Serialization.Formatters.Binary;
 
 public class FileSystem : MonoBehaviour
 {
     public static FileSystem instance;
-    public GameObject obj;
-    public GameObject obj2;
-    string positionS;
-    bool IsSaving = false;
-    public Player_data p;
+    //public GameObject obj;
+    //public GameObject obj2;
+    //string positionS;
+    //bool IsSaving = false;
+    //public Player_data p;
 
     private void Awake()
     {
@@ -67,10 +68,11 @@ public class FileSystem : MonoBehaviour
         
         string path = Application.dataPath + "/Resources/" + _FileName + _Extension;
         string data = "";
-        if(File.Exists(path))
+        if (File.Exists(path))
         {
             data = File.ReadAllText(path);
         }
+       
         return data;
     }
 
@@ -133,7 +135,7 @@ public class FileSystem : MonoBehaviour
     //}
 
     
-    T LoadFromJSON<T>(string _fileName) where T : new()
+   public  T LoadFromJSON<T>(string _fileName) where T : new()
     {
         T data = new T();
         string JSonData = ReadFile(_fileName, ".json");
@@ -150,6 +152,7 @@ public class FileSystem : MonoBehaviour
         return data;
     }
     
+   
     
     //public void SaveToBinary(string _FIleName, object _data)
     //{
@@ -167,6 +170,7 @@ public class FileSystem : MonoBehaviour
     //}
     void Start()
     {
+        
         //SaveToBinary("samuel", p);
         // //= new Player_data("Sam", "Penudo", 565656);
         //p = (Player_data)LoadFromJSON("Sam");

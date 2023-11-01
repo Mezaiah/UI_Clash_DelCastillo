@@ -1,188 +1,188 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using System;
 
 
-
+[Serializable]
 
 public class CR_Character
+
 {
-    public string name { get; set; }
-    public string rarity { get; set; }
-    public int sightRange { get; set; }
-    public int deployTime { get; set; }
-    public int chargeRange { get; set; }
-    public int speed { get; set; }
-    public int hitpoints { get; set; }
-    public int hitSpeed { get; set; }
-    public int loadTime { get; set; }
-    public int damage { get; set; }
-    public int damageSpecial { get; set; }
-    public int crownTowerDamagePercent { get; set; }
-    public bool loadFirstHit { get; set; }
-    public bool loadAfterRetarget { get; set; }
-    public int stopTimeAfterAttack { get; set; }
-    public int stopTimeAfterSpecialAttack { get; set; }
-    public int multipleProjectiles { get; set; }
-    public int multipleTargets { get; set; }
-    public bool allTargetsHit { get; set; }
-    public int range { get; set; }
-    public int minimumRange { get; set; }
-    public int specialMinRange { get; set; }
-    public int specialRange { get; set; }
-    public int specialLoadTime { get; set; }
-    public bool attacksGround { get; set; }
-    public bool attacksAir { get; set; }
-    public int deathDamageRadius { get; set; }
-    public int deathDamage { get; set; }
-    public int deathPushBack { get; set; }
-    public int attackPushBack { get; set; }
-    public int lifeTime { get; set; }
-    public int areaDamageRadius { get; set; }
-    public bool targetOnlyBuildings { get; set; }
-    public bool targetOnlyTroops { get; set; }
-    public int specialAttackInterval { get; set; }
-    public int buffOnDamageTime { get; set; }
-    public int startingBuffTime { get; set; }
-    public string fileName { get; set; }
-    public string blueExportName { get; set; }
-    public string redExportName { get; set; }
-    public bool useAnimator { get; set; }
-    public int attachedCharacterHeight { get; set; }
-    public string damageEffect { get; set; }
-    public string deathEffect { get; set; }
-    public string moveEffect { get; set; }
-    public bool loopMoveEffect { get; set; }
-    public string spawnEffect { get; set; }
-    public bool spawnEffectOnce { get; set; }
-    public bool crowdEffects { get; set; }
-    public int shadowScaleX { get; set; }
-    public int shadowScaleY { get; set; }
-    public int shadowX { get; set; }
-    public int shadowY { get; set; }
-    public int shadowSkew { get; set; }
-    public int pushback { get; set; }
-    public bool ignorePushback { get; set; }
-    public int scale { get; set; }
-    public int collisionRadius { get; set; }
-    public int mass { get; set; }
-    public int tileSizeOverride { get; set; }
-    public int areaBuffTime { get; set; }
-    public int areaBuffRadius { get; set; }
-    public string healthBar { get; set; }
-    public int healthBarOffsetY { get; set; }
-    public bool showHealthNumber { get; set; }
-    public int flyingHeight { get; set; }
-    public bool flyDirectPaths { get; set; }
-    public bool flyFromGround { get; set; }
-    public string damageExportName { get; set; }
-    public int growTime { get; set; }
-    public int growSize { get; set; }
-    public bool healOnMorph { get; set; }
-    public int morphTime { get; set; }
-    public bool morphKeepTarget { get; set; }
-    public string attackStartEffect { get; set; }
-    public int dashImmuneToDamageTime { get; set; }
-    public int dashCooldown { get; set; }
-    public int jumpHeight { get; set; }
-    public int dashPushBack { get; set; }
-    public int dashRadius { get; set; }
-    public int dashDamage { get; set; }
-    public int dashConstantTime { get; set; }
-    public int dashLandingTime { get; set; }
-    public int dashMinRange { get; set; }
-    public int dashMaxRange { get; set; }
-    public int dashDistance { get; set; }
-    public bool dashOnlyOnce { get; set; }
-    public int dashingDamage { get; set; }
-    public int dashingPushback { get; set; }
-    public int jumpSpeed { get; set; }
-    public int spawnStartTime { get; set; }
-    public int spawnInterval { get; set; }
-    public int spawnNumber { get; set; }
-    public int spawnLimit { get; set; }
-    public bool destroyAtLimit { get; set; }
-    public int spawnPauseTime { get; set; }
-    public int spawnCharacterLevelIndex { get; set; }
-    public int spawnCharacterLevelIndex2 { get; set; }
-    public int spawnCharacterLevelIndex3 { get; set; }
-    public int spawnRadius { get; set; }
-    public bool spawnAttach { get; set; }
-    public int deathSpawnCount { get; set; }
-    public int deathSpawnCount2 { get; set; }
-    public int deathSpawnRadius { get; set; }
-    public int deathSpawnMinRadius { get; set; }
-    public int spawnAngleShift { get; set; }
-    public int spawnMaxAngle { get; set; }
-    public int deathSpawnDeployTime { get; set; }
-    public bool deathSpawnPushback { get; set; }
-    public bool deathInheritIgnoreList { get; set; }
-    public bool kamikaze { get; set; }
-    public int kamikazeTime { get; set; }
-    public int spawnPathfindSpeed { get; set; }
-    public int spawnPushback { get; set; }
-    public int spawnPushbackRadius { get; set; }
-    public int spawnAreaObjectLevelIndex { get; set; }
-    public int projectileStartRadius { get; set; }
-    public int projectileStartZ { get; set; }
-    public int stopMovementAfterMS { get; set; }
-    public int waitMS { get; set; }
-    public bool dontStopMoveAnim { get; set; }
-    public bool isSummonerTower { get; set; }
-    public int noDeploySizeW { get; set; }
-    public int noDeploySizeH { get; set; }
-    public string TID { get; set; }
-    public int variableDamage2 { get; set; }
-    public int variableDamageTime1 { get; set; }
-    public int variableDamage3 { get; set; }
-    public int variableDamageTime2 { get; set; }
-    public int targetEffectY { get; set; }
-    public bool selfAsAoeCenter { get; set; }
-    public bool hidesWhenNotAttacking { get; set; }
-    public int hideTimeMs { get; set; }
-    public bool hideBeforeFirstHit { get; set; }
-    public bool specialAttackWhenHidden { get; set; }
-    public int targetedEffectVisualPushback { get; set; }
-    public int upTimeMs { get; set; }
-    public int appearPushbackRadius { get; set; }
-    public int appearPushback { get; set; }
-    public int manaCollectAmount { get; set; }
-    public int manaGenerateTimeMs { get; set; }
-    public int manaGenerateLimit { get; set; }
-    public bool hasRotationOnTimeline { get; set; }
-    public int turretMovement { get; set; }
-    public int projectileYOffset { get; set; }
-    public int chargeSpeedMultiplier { get; set; }
-    public int deployDelay { get; set; }
-    public string deployBaseAnimExportName { get; set; }
-    public bool jumpEnabled { get; set; }
-    public int sightClip { get; set; }
-    public int sightClipSide { get; set; }
-    public int walkingSpeedTweakPercentage { get; set; }
-    public int shieldHitpoints { get; set; }
-    public int shieldDiePushback { get; set; }
-    public int rotateAngleSpeed { get; set; }
-    public int deployTimerDelay { get; set; }
-    public bool retargetAfterAttack { get; set; }
-    public int attackShakeTime { get; set; }
-    public int visualHitSpeed { get; set; }
-    public int burst { get; set; }
-    public int burstDelay { get; set; }
-    public bool burstKeepTarget { get; set; }
-    public bool burstAffectAnimation { get; set; }
-    public int activationTime { get; set; }
-    public int attackDashTime { get; set; }
-    public bool buildingTarget { get; set; }
-    public bool spawnConstPriority { get; set; }
-    public int buffWhenNotAttackingTime { get; set; }
-    public int attackStateDamage { get; set; }
-    public int speedBeforeAttack { get; set; }
-    public int damageBuffOpponentTime { get; set; }
-    public int damageBuffOpponentRadius { get; set; }
-    public int damageOpponentDamage { get; set; }
-    public bool deprioritizeTargetsWithBuff { get; set; }
-    public bool overrideAttackFinishTime { get; set; }
-    public int attackFinishTime { get; set; }
-    public int scid { get; set; }
-    public int id { get; set; }
+    public string name;
+    public string rarity;
+    public int sightRange;
+    public int deployTime;
+    public int chargeRange;
+    public int speed;
+    public int hitpoints;
+    public int hitSpeed;
+    public int loadTime;
+    public int damage;
+    public int damageSpecial;
+    public int crownTowerDamagePercent;
+    public bool loadFirstHit;
+    public bool loadAfterRetarget;
+    public int stopTimeAfterAttack;
+    public int stopTimeAfterSpecialAttack;
+    public int multipleProjectiles;
+    public int multipleTargets;
+    public bool allTargetsHit;
+    public int range;
+    public int minimumRange;
+    public int specialMinRange;
+    public int specialRange;
+    public int specialLoadTime;
+    public bool attacksGround;
+    public bool attacksAir;
+    public int deathDamageRadius;
+    public int deathDamage;
+    public int deathPushBack;
+    public int attackPushBack;
+    public int lifeTime;
+    public int areaDamageRadius;
+    public bool targetOnlyBuildings;
+    public bool targetOnlyTroops;
+    public int specialAttackInterval;
+    public int buffOnDamageTime;
+    public int startingBuffTime;
+    public string fileName;
+    public string blueExportName;
+    public string redExportName;
+    public bool useAnimator;
+    public int attachedCharacterHeight;
+    public string damageEffect;
+    public string deathEffect;
+    public string moveEffect;
+    public bool loopMoveEffect;
+    public string spawnEffect;
+    public bool spawnEffectOnce;
+    public bool crowdEffects;
+    public int shadowScaleX;
+    public int shadowScaleY;
+    public int shadowX;
+    public int shadowY;
+    public int shadowSkew;
+    public int pushback;
+    public bool ignorePushback;
+    public int scale;
+    public int collisionRadius;
+    public int mass;
+    public int tileSizeOverride;
+    public int areaBuffTime;
+    public int areaBuffRadius;
+    public string healthBar;
+    public int healthBarOffsetY;
+    public bool showHealthNumber;
+    public int flyingHeight;
+    public bool flyDirectPaths;
+    public bool flyFromGround;
+    public string damageExportName;
+    public int growTime;
+    public int growSize;
+    public bool healOnMorph;
+    public int morphTime;
+    public bool morphKeepTarget;
+    public string attackStartEffect;
+    public int dashImmuneToDamageTime;
+    public int dashCooldown;
+    public int jumpHeight;
+    public int dashPushBack;
+    public int dashRadius;
+    public int dashDamage;
+    public int dashConstantTime;
+    public int dashLandingTime;
+    public int dashMinRange;
+    public int dashMaxRange;
+    public int dashDistance;
+    public bool dashOnlyOnce;
+    public int dashingDamage;
+    public int dashingPushback;
+    public int jumpSpeed;
+    public int spawnStartTime;
+    public int spawnInterval;
+    public int spawnNumber;
+    public int spawnLimit;
+    public bool destroyAtLimit;
+    public int spawnPauseTime;
+    public int spawnCharacterLevelIndex;
+    public int spawnCharacterLevelIndex2;
+    public int spawnCharacterLevelIndex3;
+    public int spawnRadius;
+    public bool spawnAttach;
+    public int deathSpawnCount;
+    public int deathSpawnCount2;
+    public int deathSpawnRadius;
+    public int deathSpawnMinRadius;
+    public int spawnAngleShift;
+    public int spawnMaxAngle;
+    public int deathSpawnDeployTime;
+    public bool deathSpawnPushback;
+    public bool deathInheritIgnoreList;
+    public bool kamikaze;
+    public int kamikazeTime;
+    public int spawnPathfindSpeed;
+    public int spawnPushback;
+    public int spawnPushbackRadius;
+    public int spawnAreaObjectLevelIndex;
+    public int projectileStartRadius;
+    public int projectileStartZ;
+    public int stopMovementAfterMS;
+    public int waitMS;
+    public bool dontStopMoveAnim;
+    public bool isSummonerTower;
+    public int noDeploySizeW;
+    public int noDeploySizeH;
+    public string TID;
+    public int variableDamage2;
+    public int variableDamageTime1;
+    public int variableDamage3;
+    public int variableDamageTime2;
+    public int targetEffectY;
+    public bool selfAsAoeCenter;
+    public bool hidesWhenNotAttacking;
+    public int hideTimeMs;
+    public bool hideBeforeFirstHit;
+    public bool specialAttackWhenHidden;
+    public int targetedEffectVisualPushback;
+    public int upTimeMs;
+    public int appearPushbackRadius;
+    public int appearPushback;
+    public int manaCollectAmount;
+    public int manaGenerateTimeMs;
+    public int manaGenerateLimit;
+    public bool hasRotationOnTimeline;
+    public int turretMovement;
+    public int projectileYOffset;
+    public int chargeSpeedMultiplier;
+    public int deployDelay;
+    public string deployBaseAnimExportName;
+    public bool jumpEnabled;
+    public int sightClip;
+    public int sightClipSide;
+    public int walkingSpeedTweakPercentage;
+    public int shieldHitpoints;
+    public int shieldDiePushback;
+    public int rotateAngleSpeed;
+    public int deployTimerDelay;
+    public bool retargetAfterAttack;
+    public int attackShakeTime;
+    public int visualHitSpeed;
+    public int burst;
+    public int burstDelay;
+    public bool burstKeepTarget;
+    public bool burstAffectAnimation;
+    public int activationTime;
+    public int attackDashTime;
+    public bool buildingTarget;
+    public bool spawnConstPriority;
+    public int buffWhenNotAttackingTime;
+    public int attackStateDamage;
+    public int speedBeforeAttack;
+    public int damageBuffOpponentTime;
+    public int damageBuffOpponentRadius;
+    public int damageOpponentDamage;
+    public bool deprioritizeTargetsWithBuff;
+    public bool overrideAttackFinishTime;
+    public int attackFinishTime;
+    public int scid;
+    public int id;
+
 }
