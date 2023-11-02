@@ -12,13 +12,14 @@ public class Level_Manager : MonoBehaviour
     {
         string path = Application.dataPath + "/Resources/" + _FileName + ".json";
         string data = File.ReadAllText(path);
-        var resource = JSON.Parse(path);
+        var resource = JSON.Parse(data);
 
         for (int i = 0; i < resource.Count; i++)
         {
             CR_Character chara = new CR_Character();
             chara.name = resource[i]["name"].Value;
             chara.rarity = resource[i]["rarity"].Value;
+            chara.id = int.Parse(resource[i]["id"].Value);
             characterz.Add(chara);
 
         }
