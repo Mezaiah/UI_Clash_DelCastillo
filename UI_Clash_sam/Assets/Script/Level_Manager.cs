@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System.IO;
 using SimpleJSON;
 using TMPro;
@@ -60,6 +61,9 @@ public class Level_Manager : MonoBehaviour
     public GameObject character49;
     public GameObject character50;
     public GameObject character51;
+    public GameObject character52;
+    public Sprite pepe;
+
     public void LoadCharacter(string _FileName)
     {
         string path = Application.dataPath + "/Resources/" + _FileName + ".json";
@@ -83,6 +87,18 @@ public class Level_Manager : MonoBehaviour
         LoadCharacter("characters");
         //FileSystem.instance.LoadCharacter("characters");
         //CR_Character CharData = FileSystem.instance.LoadFromJSON<CR_Character>("characters");
+        //Knight
+
+        //for (int i = 0; i < 70; i++)
+        //{
+            character52.transform.GetChild(1).GetComponent<TMP_Text>().text = characterz[0].name;
+        character52.transform.GetChild(3).GetChild(0).GetComponent<TMP_Text>().text = characterz[0].id.ToString();
+        character52.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Cardzz/" + characterz[0].name);
+
+
+        //}
+
+
         //Knight
         character1.transform.GetChild(1).GetComponent<TMP_Text>().text = characterz[0].name;
         character1.transform.GetChild(3).GetChild(0).GetComponent<TMP_Text>().text = characterz[0].id.ToString();
