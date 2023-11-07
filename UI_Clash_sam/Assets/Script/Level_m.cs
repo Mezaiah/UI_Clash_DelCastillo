@@ -38,6 +38,19 @@ public class Level_M : MonoBehaviour
             if (i < characterz.Count)
             {
                 characters[i].transform.GetChild(1).GetComponent<TMP_Text>().text = characterz[i].name;
+                
+                if (characterz[i].rarity == "Legendary")
+                {
+                    characters[i].transform.GetChild(1).GetComponent<TMP_Text>().color = new Color(1.0f, 0.0f, 0.0f); ;
+                }
+                else if (characterz[i].rarity == "Rare")
+                {
+                    characters[i].transform.GetChild(1).GetComponent<TMP_Text>().color = new Color(102 / 255f, 204 / 255f, 0 / 255f); ; 
+                }
+                else if (characterz[i].rarity == "Epic")
+                {
+                    characters[i].transform.GetChild(1).GetComponent<TMP_Text>().color = new Color(178 / 255f, 102 / 255f, 255 / 255f); ;
+                }
                 characters[i].transform.GetChild(3).GetChild(0).GetComponent<TMP_Text>().text = characterz[i].id.ToString();
            if (characterz[i].name == "Golemite" ||
                     characterz[i].name == "TowerPrincess" || 

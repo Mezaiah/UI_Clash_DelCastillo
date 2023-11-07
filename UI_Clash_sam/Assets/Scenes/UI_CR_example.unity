@@ -5102,7 +5102,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 571838513}
-  - component: {fileID: 571838515}
   m_Layer: 5
   m_Name: Main_menu_slide
   m_TagString: Untagged
@@ -5132,27 +5131,6 @@ RectTransform:
   m_AnchoredPosition: {x: 568.68, y: 0.0126001835}
   m_SizeDelta: {x: 1082.1, y: 1893.8}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &571838515
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 571838512}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9e3983bb0586a53489ab12df8ee2158f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &575964659 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9136529979869497644, guid: bd43c214e4b17ff4a91216865815d633, type: 3}
@@ -15042,7 +15020,7 @@ MonoBehaviour:
   m_Content: {fileID: 1646089627}
   m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 2
+  m_MovementType: 1
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
