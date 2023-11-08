@@ -9,11 +9,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 public class FileSystem : MonoBehaviour
 {
     public static FileSystem instance;
-    //public GameObject obj;
-    //public GameObject obj2;
-    //string positionS;
-    //bool IsSaving = false;
-    //public Player_data p;
+    
 
     private void Awake()
     {
@@ -26,43 +22,7 @@ public class FileSystem : MonoBehaviour
             instance = this;
         }
     }
-    //void CreateFile(string _FileName, string _extension, string _data)
-    //{
-    //    //1) path
-    //    //string FileName = "Example";
-    //    //string extension = ".txt";
-    //    string path = Application.dataPath + "/Resources/" + _FileName + _extension;
-
-
-    //    //2)crear archivo si no existe ya uno con el mismo nombre
-    //    if (!File.Exists(path))
-    //    {
-    //    //3)escribir dentro del archivo
-    //        //File.WriteAllText(path, "");
-    //    }
-    //    //4)Almacenar el contenido
-    //    //string data = " Login Date: " + System.DateTime.Now + "\n" + positionS;
-    //    //string data = positionS;
-    //    ////5)agregart la info al archivo
-    //    File.AppendAllText(path, _data);
-
-
-    //}
-
-    //public void SaveToJSON(string _FIleName, object _data)
-    //{
-    //    string JSONData = JsonUtility.ToJson(_data);
-    //    if(JSONData.Length != 0)
-    //    {
-    //        Debug.Log("jSON string" + JSONData);
-    //        CreateFile(_FIleName,".json", JSONData);
-    //    }
-    //    else
-    //    {
-    //        Debug.LogWarning("Tas_Wey");
-    //    }
-
-    //}
+    
     string ReadFile(string _FileName, string _Extension)
     {
         
@@ -171,24 +131,12 @@ public class FileSystem : MonoBehaviour
     void Start()
     {
         
-        //SaveToBinary("samuel", p);
-        // //= new Player_data("Sam", "Penudo", 565656);
-        //p = (Player_data)LoadFromJSON("Sam");
-        ////SaveToJSON(p.Name, p);
-        //string data = ReadFile("Position", ".txt");
-        //Debug.Log("Información de archivo: \n " + data);
-        //Vector3 position = ReadPositionFromText("Position", ".txt");
-        //Debug.Log("Position from file: " + position);
-        //obj2.transform.position = position;
+       
     }
 
     //Update is called once per frame
     void Update()
     {
-        //if (IsSaving)
-        //{
-            //SaveP(obj.transform);
-            //CreateFile();
-        //}
+       
     }
 }
